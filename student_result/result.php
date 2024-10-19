@@ -1,31 +1,47 @@
 <?php
 
-$marks = 20;
 
+// Sample marks for 5 subjects
+$bangla = 20;
+$english = 35;
+$math = 50;
+$physics = 60;
+$chemistry = 58;
+
+// Calculate total and average marks
+$totalMarks = $bangla + $english + $math + $physics + $chemistry;
+$averageMarks = $totalMarks / 5;
+
+echo "Total Marks: $totalMarks<br>";
+echo "Average Marks: $averageMarks<br>";
+
+// Determine grade based on average marks
 switch (true) {
-    case ($marks >= 80 && $marks <= 100):
+    case ($averageMarks >= 80 && $averageMarks <= 100):
         echo "Your Grade is A+";
         break;
-    case ($marks >= 70 && $marks <= 79):
+    case ($averageMarks >= 70 && $averageMarks <= 79):
         echo "Your Grade is A";
         break;
-    case ($marks >= 60 && $marks <= 69):
+    case ($averageMarks >= 60 && $averageMarks <= 69):
         echo "Your Grade is A-";
         break;
-    case ($marks >= 50 && $marks <= 59):
+    case ($averageMarks >= 50 && $averageMarks <= 59):
         echo "Your Grade is B";
         break;
-    case ($marks >= 40 && $marks <= 49):
+    case ($averageMarks >= 40 && $averageMarks <= 49):
         echo "Your Grade is C";
         break;
-    case ($marks >= 33 && $marks <= 39):
+    case ($averageMarks >= 33 && $averageMarks <= 39):
         echo "Your Grade is D";
         break;
-    case ($marks >= 0 && $marks <= 32):
+    case ($averageMarks >= 0 && $averageMarks <= 32):
         echo "You are failed. Your Grade is F";
         break;
     default:
         echo "Invalid marks entered.";
         break;
 }
+
+
 
